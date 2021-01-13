@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "infos"
+		},
+		{
+			"path": "infos-user"
+		},
+		{
+			"path": "coursework"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.tcc": "cpp",
+			"string": "cpp"
+		}
+	}
+}
