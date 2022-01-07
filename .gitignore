@@ -1,2 +1,6 @@
 *.d
 *.o
+*.idea
+infos-coursework-solutions/
+infos/
+infos-user/
