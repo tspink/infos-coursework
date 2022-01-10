@@ -55,6 +55,16 @@ public:
     }
 };
 
+/* EXTENSION TASK: DESCRIBE A COMMON PROBLEM WITH THE MULTIPLE
+ * QUEUE PRIORITY SCHEDULING ALGORITHM AND PROPOSE A SOLUTION.
+ * ANSWER:
+ *
+ *
+ *
+ *
+ *
+*/
+
 /* --- DO NOT CHANGE ANYTHING BELOW THIS LINE --- */
 
 RegisterScheduler(MultipleQueuePriorityScheduler);
