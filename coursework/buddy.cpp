@@ -85,11 +85,21 @@ public:
 	}
 
     /**
+	 * Frees 2^order contiguous pages.
+	 * @param pgd A pointer to an array of page descriptors to be freed.
+	 * @param order The power of two number of contiguous pages to free.
+	 */
+    void free_pages(PageDescriptor *pgd, int order) override
+    {
+        not_implemented();
+    }
+
+    /**
      * Marks a range of pages as available for allocation.
      * @param start A pointer to the first page descriptors to be made available.
      * @param count The number of page descriptors to make available.
      */
-    void insert_page_range(PageDescriptor *start, uint64_t count) {
+    virtual void insert_page_range(PageDescriptor *start, uint64_t count) override {
         not_implemented();
     }
 
@@ -98,7 +108,7 @@ public:
      * @param start A pointer to the first page descriptors to be made unavailable.
      * @param count The number of page descriptors to make unavailable.
      */
-    void void remove_page_range(PageDescriptor *start, uint64_t count) {
+    virtual void remove_page_range(PageDescriptor *start, uint64_t count) override {
         not_implemented();
     }
 
