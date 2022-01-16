@@ -1,11 +1,8 @@
 /*
- * Multiple Queue (MQ) Priority Scheduling Algorithm
- * SKELETON IMPLEMENTATION -- TO BE FILLED IN FOR TASK (1)
+ * The Priority Task Scheduler
+ * SKELETON IMPLEMENTATION TO BE FILLED IN FOR TASK 1
  */
 
-/*
- * STUDENT NUMBER: s
- */
 #include <infos/kernel/sched.h>
 #include <infos/kernel/thread.h>
 #include <infos/kernel/log.h>
@@ -32,7 +29,7 @@ public:
      */
     void add_to_runqueue(SchedulingEntity& entity) override
     {
-        not_implemented();
+        // TODO: Implement me!
     }
 
     /**
@@ -41,7 +38,7 @@ public:
      */
     void remove_from_runqueue(SchedulingEntity& entity) override
     {
-        not_implemented();
+        // TODO: Implement me!
     }
 
     /**
@@ -51,19 +48,9 @@ public:
      */
     SchedulingEntity *pick_next_entity() override
     {
-        not_implemented();
+        // TODO: Implement me!
     }
 };
-
-/* EXTENSION TASK: DESCRIBE A COMMON PROBLEM WITH THE MULTIPLE
- * QUEUE PRIORITY SCHEDULING ALGORITHM AND PROPOSE A SOLUTION.
- * ANSWER:
- *
- *
- *
- *
- *
-*/
 
 /* --- DO NOT CHANGE ANYTHING BELOW THIS LINE --- */
 

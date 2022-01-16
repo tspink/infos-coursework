@@ -1,11 +1,8 @@
 /*
- * Buddy Page Allocation Algorithm
- * SKELETON IMPLEMENTATION -- TO BE FILLED IN FOR TASK (2)
+ * The Buddy Page Allocator
+ * SKELETON IMPLEMENTATION TO BE FILLED IN FOR TASK 2
  */
 
-/*
- * STUDENT NUMBER: s
- */
 #include <infos/mm/page-allocator.h>
 #include <infos/mm/mm.h>
 #include <infos/kernel/kernel.h>
@@ -33,7 +30,7 @@ private:
 	 */
 	PageDescriptor *buddy_of(PageDescriptor *pgd, int order)
 	{
-        not_implemented();
+        // TODO: Implement me!
 	}
 
 	/**
@@ -46,33 +43,21 @@ private:
 	 */
 	PageDescriptor *split_block(PageDescriptor **block_pointer, int source_order)
 	{
-        not_implemented();
+        // TODO: Implement me!
 	}
 
 	/**
-	 * Takes a block in the given source order, and merges it (and it's buddy) into the next order.
-	 * This function assumes both the source block and the buddy block are in the free list for the
-	 * source order.  If they aren't this function will panic the system.
+	 * Takes a block in the given source order, and merges it (and its buddy) into the next order.
 	 * @param block_pointer A pointer to a pointer containing a block in the pair to merge.
 	 * @param source_order The order in which the pair of blocks live.
 	 * @return Returns the new slot that points to the merged block.
 	 */
 	PageDescriptor **merge_block(PageDescriptor **block_pointer, int source_order)
 	{
-        not_implemented();
+        // TODO: Implement me!
 	}
 
 public:
-	/**
-	 * Constructs a new instance of the Buddy Page Allocator.
-	 */
-	BuddyPageAllocator() {
-		// Iterate over each free area, and clear it.
-		for (unsigned int i = 0; i < ARRAY_SIZE(_free_areas); i++) {
-			_free_areas[i] = NULL;
-		}
-	}
-
 	/**
 	 * Allocates 2^order number of contiguous pages
 	 * @param order The power of two, of the number of contiguous pages to allocate.
@@ -81,7 +66,7 @@ public:
 	 */
 	PageDescriptor *allocate_pages(int order) override
 	{
-		not_implemented();
+        // TODO: Implement me!
 	}
 
     /**
@@ -91,7 +76,7 @@ public:
 	 */
     void free_pages(PageDescriptor *pgd, int order) override
     {
-        not_implemented();
+        // TODO: Implement me!
     }
 
     /**
@@ -99,8 +84,9 @@ public:
      * @param start A pointer to the first page descriptors to be made available.
      * @param count The number of page descriptors to make available.
      */
-    virtual void insert_page_range(PageDescriptor *start, uint64_t count) override {
-        not_implemented();
+    virtual void insert_page_range(PageDescriptor *start, uint64_t count) override
+    {
+        // TODO: Implement me!
     }
 
     /**
@@ -108,8 +94,9 @@ public:
      * @param start A pointer to the first page descriptors to be made unavailable.
      * @param count The number of page descriptors to make unavailable.
      */
-    virtual void remove_page_range(PageDescriptor *start, uint64_t count) override {
-        not_implemented();
+    virtual void remove_page_range(PageDescriptor *start, uint64_t count) override
+    {
+        // TODO: Implement me!
     }
 
 	/**
@@ -118,7 +105,7 @@ public:
 	 */
 	bool init(PageDescriptor *page_descriptors, uint64_t nr_page_descriptors) override
 	{
-		not_implemented();
+        // TODO: Implement me!
 	}
 
 	/**
