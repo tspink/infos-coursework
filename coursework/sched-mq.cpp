@@ -24,6 +24,14 @@ public:
     const char* name() const override { return "mq"; }
 
     /**
+     * Called during scheduler initialisation.
+     */
+    void init()
+    {
+        // TODO: Implement me!
+    }
+
+    /**
      * Called when a scheduling entity becomes eligible for running.
      * @param entity
      */
