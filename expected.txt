@@ -1,0 +1,377 @@
+ notice: mm: PAGE ALLOCATOR SELF TEST - BEGIN
+ notice: mm: ------------------------
+   info: mm: * INITIAL STATE
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 
+  debug: mm: [2] 
+  debug: mm: [3] 
+  debug: mm: [4] 
+  debug: mm: [5] 
+  debug: mm: [6] 
+  debug: mm: [7] 
+  debug: mm: [8] 
+  debug: mm: [9] 
+  debug: mm: [10] 
+  debug: mm: [11] 
+  debug: mm: [12] 
+  debug: mm: [13] 
+  debug: mm: [14] 
+  debug: mm: [15] 
+  debug: mm: [16] 0 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000 
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (1) ALLOCATING ONE PAGE
+   info: mm: ALLOCATED PFN: 0x0
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 1 
+  debug: mm: [1] 2 
+  debug: mm: [2] 4 
+  debug: mm: [3] 8 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (2) FREEING ONE PAGE
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 
+  debug: mm: [2] 
+  debug: mm: [3] 
+  debug: mm: [4] 
+  debug: mm: [5] 
+  debug: mm: [6] 
+  debug: mm: [7] 
+  debug: mm: [8] 
+  debug: mm: [9] 
+  debug: mm: [10] 
+  debug: mm: [11] 
+  debug: mm: [12] 
+  debug: mm: [13] 
+  debug: mm: [14] 
+  debug: mm: [15] 
+  debug: mm: [16] 0 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (3) ALLOCATING TWO CONTIGUOUS PAGES
+   info: mm: ALLOCATED PFN: 0x0
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 2 
+  debug: mm: [2] 4 
+  debug: mm: [3] 8 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (4) FREEING TWO CONTIGUOUS PAGES
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 
+  debug: mm: [2] 
+  debug: mm: [3] 
+  debug: mm: [4] 
+  debug: mm: [5] 
+  debug: mm: [6] 
+  debug: mm: [7] 
+  debug: mm: [8] 
+  debug: mm: [9] 
+  debug: mm: [10] 
+  debug: mm: [11] 
+  debug: mm: [12] 
+  debug: mm: [13] 
+  debug: mm: [14] 
+  debug: mm: [15] 
+  debug: mm: [16] 0 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (5) OVERLAPPING ALLOCATIONS
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 
+  debug: mm: [2] 
+  debug: mm: [3] 
+  debug: mm: [4] 
+  debug: mm: [5] 
+  debug: mm: [6] 
+  debug: mm: [7] 
+  debug: mm: [8] 
+  debug: mm: [9] 
+  debug: mm: [10] 
+  debug: mm: [11] 
+  debug: mm: [12] 
+  debug: mm: [13] 
+  debug: mm: [14] 
+  debug: mm: [15] 
+  debug: mm: [16] 0 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (6) MULTIPLE ALLOCATIONS, RANDOM ORDER FREE
+   info: mm: * AFTER ALLOCATION
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] b 
+  debug: mm: [1] 
+  debug: mm: [2] c 
+  debug: mm: [3] 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0x8
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 8 b 
+  debug: mm: [1] 
+  debug: mm: [2] c 
+  debug: mm: [3] 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0x4
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 8 b 
+  debug: mm: [1] 
+  debug: mm: [2] 4 c 
+  debug: mm: [3] 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0x9
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] b 
+  debug: mm: [1] 8 
+  debug: mm: [2] 4 c 
+  debug: mm: [3] 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0xa
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 
+  debug: mm: [2] 4 
+  debug: mm: [3] 8 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0x2
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 2 
+  debug: mm: [1] 
+  debug: mm: [2] 4 
+  debug: mm: [3] 8 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0x1
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 1 2 
+  debug: mm: [1] 
+  debug: mm: [2] 4 
+  debug: mm: [3] 8 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0x0
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 2 
+  debug: mm: [1] 0 
+  debug: mm: [2] 4 
+  debug: mm: [3] 8 
+  debug: mm: [4] 10 
+  debug: mm: [5] 20 
+  debug: mm: [6] 40 
+  debug: mm: [7] 80 
+  debug: mm: [8] 100 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm:   FREE 0x3
+   info: mm: * AFTER RANDOM ORDER FREEING
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 
+  debug: mm: [2] 
+  debug: mm: [3] 
+  debug: mm: [4] 
+  debug: mm: [5] 
+  debug: mm: [6] 
+  debug: mm: [7] 
+  debug: mm: [8] 
+  debug: mm: [9] 
+  debug: mm: [10] 
+  debug: mm: [11] 
+  debug: mm: [12] 
+  debug: mm: [13] 
+  debug: mm: [14] 
+  debug: mm: [15] 
+  debug: mm: [16] 0 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (7) RESERVING PAGE 0x14e000 and 0x14f000
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 14c 
+  debug: mm: [2] 148 
+  debug: mm: [3] 140 
+  debug: mm: [4] 150 
+  debug: mm: [5] 160 
+  debug: mm: [6] 100 
+  debug: mm: [7] 180 
+  debug: mm: [8] 0 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (8) FREEING RESERVED PAGE 0x14f000
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 14f 
+  debug: mm: [1] 14c 
+  debug: mm: [2] 148 
+  debug: mm: [3] 140 
+  debug: mm: [4] 150 
+  debug: mm: [5] 160 
+  debug: mm: [6] 100 
+  debug: mm: [7] 180 
+  debug: mm: [8] 0 
+  debug: mm: [9] 200 
+  debug: mm: [10] 400 
+  debug: mm: [11] 800 
+  debug: mm: [12] 1000 
+  debug: mm: [13] 2000 
+  debug: mm: [14] 4000 
+  debug: mm: [15] 8000 
+  debug: mm: [16] 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: (9) FREEING RESERVED PAGE 0x14e000
+  debug: mm: BUDDY STATE:
+  debug: mm: [0] 
+  debug: mm: [1] 
+  debug: mm: [2] 
+  debug: mm: [3] 
+  debug: mm: [4] 
+  debug: mm: [5] 
+  debug: mm: [6] 
+  debug: mm: [7] 
+  debug: mm: [8] 
+  debug: mm: [9] 
+  debug: mm: [10] 
+  debug: mm: [11] 
+  debug: mm: [12] 
+  debug: mm: [13] 
+  debug: mm: [14] 
+  debug: mm: [15] 
+  debug: mm: [16] 0 10000 20000 30000 40000 50000 60000 70000 80000 90000 a0000 b0000
+c0000 d0000 e0000 f0000 100000 110000 120000 130000 140000 
+   info: mm: ------------------------
+   info: mm: PAGE ALLOCATOR SELF TEST - COMPLETE
